@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 //specify what props it takes
 //can also pass an object directly into React, but more common to declare an interface
@@ -18,9 +18,10 @@ interface Props {
   person: Person; //utilizes the Person interface that sets up an object
 }
 
-export const TextField: React.FC<Props> = () => {
+export const TextField: React.FC<Props> = ({ }) => {
   //adding : React.FC makes TextField a React functional component
   
+  const [count, setCount] = useState(5) //typescript reads the 5 and infers that the type for count & setCount is a number
   return (
     <div>
       <input/>
