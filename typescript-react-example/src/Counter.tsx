@@ -12,5 +12,9 @@ interface Props {
 export const Counter: React.FC<Props> = ({ children }) => {
   const [count, setCount] = useState(0);
 
-  return <div>{children({ count, setCount })}</div>;
+  return(
+    <div style={{display:"flex", justifyContent:"center"}}>
+    {children({ count, setCount })}
+    </div>
+  )
 };
